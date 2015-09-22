@@ -5,6 +5,10 @@ void main (){
 	int i, a, b, menor, n, j, *v;
 	printf("Digite a quantidade de inteiros que voce vai entrar: ");  //o programa pergunta ao o usuario o numero de inteiros que entrará no vetor
 	scanf("%d", &n);
+	if(n<2){
+		printf("Por favor, escolha um tamanho de lista maior ou igual a 2:\n");
+		scanf("%d", &n);
+	}
 	printf("Entre com os inteiros, separando eles pela tecla Enter:\n");   //entao ele pede para que o usuario entre com tais ineiros
 	v=(int *) malloc(n*sizeof(int));   //por alocação dinamica, o espaço separado para o vetor é corresponde ao numero de inteiros que o usuario afirmou que entraria
 	for(j=0; j<n; j++){    //ocorre a alocação dos elementos no vetor
